@@ -1,26 +1,23 @@
 # Описание сущностей
 
-## Пассажир (Passenger)
+## Roles (Роли)
 | Имя поля | Описание | Тип | Ограничения |
 |:--------:|:--------:|:---:|:-----------:|
-| personal_id | Первичный ключ | VARCHAR(14) | PK |
-| name | Имя | VARCHAR(30) | NOT NULL |
-| fullname | Фамилия | VARCHAR(30) | NOT NULL |
-| citizenship | Гражданство | VARCHAR(30) | NOT NULL |
-| sex | Пол | BOOL | TRUE/FALSE |
-| birthdate | Дата рождения | DATETIME |  |
-| passport | Пасспортные данные | VARCHAR(9) | NOT NULL |
+| id | Первичный ключ | VARCHAR(14) | PK |
+| role | Роль | VARCHAR(10) | NOT NULL |
 
 ## User (Пользователь)
 | Имя поля | Описание | Тип | Ограничения |
 |:--------:|:--------:|:---:|:-----------:|
 | id | Первичный ключ | NUMBER | PK |
 | password | Пароль пользователя | VARCHAR(255) | NOT NULL, SHA-256 |
-
-## Administrator (Администратор)
-| Имя поля | Описание | Тип | Ограничения |
-|:--------:|:--------:|:---:|:-----------:|
-| id | Первичный ключ | NUMBER | PK |
+| name | Имя | VARCHAR(30) | NOT NULL |
+| role_id | Роль | NUMBER | FK, NOT NULL |
+| fullname | Фамилия | VARCHAR(30) | NOT NULL |
+| citizenship | Гражданство | VARCHAR(30) | NOT NULL |
+| sex | Пол | BOOL | TRUE/FALSE |
+| birthdate | Дата рождения | DATETIME |  |
+| passport | Пасспортные данные | VARCHAR(9) | NOT NULL |
 
 ## Билет (Ticket)
 | Имя поля | Описание | Тип | Ограничения |

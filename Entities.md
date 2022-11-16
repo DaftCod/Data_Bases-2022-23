@@ -15,9 +15,10 @@
 | role_id | Роль | NUMBER | FK, NOT NULL |
 | fullname | Фамилия | VARCHAR(30) | NOT NULL |
 | citizenship | Гражданство | VARCHAR(30) | NOT NULL |
-| sex | Пол | BOOL | TRUE/FALSE |
+| sex | Пол | VARCHAR(6) | NOT NULL |
 | birthdate | Дата рождения | DATETIME |  |
-| passport | Пасспортные данные | VARCHAR(9) | NOT NULL |
+| passport_series_and_number | Пасспортные данные | VARCHAR(9) | NOT NULL |
+| passport_id | ID пасспорта | VARCHAR(14) | NOT NULL |
 
 ## Билет (Ticket)
 | Имя поля | Описание | Тип | Ограничения |
@@ -76,7 +77,7 @@
 | name | Имя | VARCHAR(30) | NOT NULL |
 | fullname | Фамилия | VARCHAR(30) | NOT NULL |
 | citizenship | Гражданство | VARCHAR(30) | NOT NULL |
-| sex | Пол | BOOL | TRUE/FALSE |
+| sex | Пол | VARCHAR(6) | NOT NULL |
 | birthdate | Дата рождения | DATETIME |  |
 
 ## Экипаж (Crew)

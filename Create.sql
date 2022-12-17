@@ -96,3 +96,17 @@ airplane_id INT FOREIGN KEY REFERENCES airplanes(id) NOT NULL,
 seat_number INT NOT NULL,
 seat_class VARCHAR(10) NOT NULL
 )
+
+CREATE TABLE flight_logs
+(
+id INT PRIMARY KEY IDENTITY,
+flight_id INT NOT NULL FOREIGN KEY REFERENCES flights(id),
+message VARCHAR(300) NOT NULL
+)
+
+CREATE TABLE ticket_logs
+(
+id INT PRIMARY KEY IDENTITY,
+ticket_id INT NOT NULL FOREIGN KEY REFERENCES tickets(id),
+message VARCHAR(300) NOT NULL
+)
